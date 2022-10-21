@@ -1,0 +1,249 @@
+@import "../Sass/misc";
+
+body {
+  background-color: $white;
+
+  // NavBar
+  nav {
+    @include myNav();
+  }
+
+  // Trivia-Game
+  #trivia-container {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+  }
+  #trivia-container.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .trivia {
+    background: linear-gradient(0.25turn, $green, $yellow);
+    height: 80vh;
+    border-radius: 20px;
+    border: solid black 2px;
+  }
+  #game-container {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+
+    #img-happy {
+      display: none;
+    }
+    #img-sad {
+      display: none;
+    }
+
+    #img-happy.active {
+      display: block;
+      background-image: url("./images/Good.png");
+      background-position: center;
+      background-size: cover;
+      height: 150px;
+      width: 150px;
+    }
+    #img-sad.active {
+      display: block;
+      background-image: url("./images/Sad.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 150px;
+      width: 150px;
+    }
+
+    .title {
+      font-family: $Roboto;
+      padding: 0px 30px 0px 30px;
+      font-size: large;
+      font-weight: bold;
+    }
+    .questions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 280px;
+      button {
+        width: 320px;
+        border-radius: 40px;
+        font-family: $Roboto;
+        height: 50px;
+      }
+    }
+    .score {
+      font-family: $Roboto;
+      font-size: x-large;
+      .score_end {
+        font-size: xx-large;
+      }
+    }
+  }
+  #game-container.active {
+    display: flex;
+    height: 100%;
+  }
+  .correct {
+    background-color: $green;
+  }
+  .incorrect {
+    background-color: red;
+  }
+  .hide {
+    display: none;
+  }
+
+  // Header
+  header {
+    height: 750px;
+    color: $black;
+    .row {
+      height: 750px;
+      border-bottom: 4px solid black;
+      align-items: center;
+      background-image: url(./images/Mradi.jpg);
+      background-position: center;
+      background-size: cover;
+      .text {
+        h1 {
+          margin-left: 40px;
+          font-family: $Henny;
+          height: 100px;
+          span:nth-child(1) {
+            color: $purple;
+          }
+          span:nth-child(2) {
+            color: $green;
+          }
+          span:nth-child(3) {
+            color: $white;
+          }
+        }
+        p {
+          font-size: 20px;
+          font-family: $Roboto;
+          font-weight: 700;
+          padding: 50px;
+        }
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            @include myButton();
+            padding: 20px;
+            border-radius: 20%;
+            font-size: x-large;
+          }
+        }
+      }
+    }
+  }
+
+  // Carousel
+  main {
+    .carousel-inner {
+      height: 40rem;
+      .carousel-item {
+        height: 30rem;
+        img {
+          filter: brightness(55%);
+        }
+        .carousel-caption {
+          color: $white;
+          height: 110px;
+          h5 {
+            font-family: $Pattaya;
+            font-size: x-large;
+          }
+          p {
+            font-family: $Roboto;
+            font-size: large;
+          }
+        }
+      }
+    }
+  }
+
+  // Section
+  section {
+    height: 50rem;
+    .title {
+      padding: 80px 0px 50px 0px;
+      h3 {
+        font-family: $Henny;
+        font-size: xx-large;
+        height: 80px;
+      }
+      p {
+        font-family: $Roboto;
+        font-size: large;
+      }
+    }
+    .card-container {
+      .row {
+        align-items: center;
+        height: 250px;
+        .card-body {
+          display: flex;
+          justify-content: center;
+          img {
+            height: 100px;
+            width: 150px;
+          }
+          button {
+            border: none;
+          }
+          .toggle {
+            @include myButton();
+          }
+          .modal-title {
+            font-family: $Henny;
+            font-size: large;
+          }
+          .modal-body {
+            font-family: $Roboto;
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    @include myFooter();
+  }
+
+  // Media Query
+  @media (max-width: 768px) {
+    header {
+      .row {
+        background-image: none;
+        background-color: $yellow;
+        .text {
+          p {
+            padding: 30px;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    main {
+      .carousel-inner {
+        .carousel-item {
+          img {
+            filter: none;
+            height: 460px;
+          }
+        }
+      }
+    }
+  }
+}

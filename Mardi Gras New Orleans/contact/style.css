@@ -1,0 +1,148 @@
+body {
+  background-color: #f2f2f2;
+}
+body nav .navbar-toggler {
+  background-color: #8cbf3f;
+  color: #0d0d0d;
+  font-family: "Roboto Serif", serif;
+  width: 100%;
+}
+body nav .nav-link {
+  color: #0d0d0d;
+  text-align: center;
+  font-family: "Roboto Serif", serif;
+}
+body main {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#f2f2f2, #9453a6);
+  font-family: "Roboto Serif", serif;
+}
+body main .header {
+  font-family: "Henny Penny";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+body main .header span:nth-child(1) {
+  color: #9453a6;
+}
+body main .header span:nth-child(2) {
+  color: #8cbf3f;
+}
+body main .header span:nth-child(3) {
+  color: #f2cc0f;
+}
+body main form {
+  padding: 35px;
+  border-radius: 3%;
+  width: 50vw;
+  background-color: #f2f2f2;
+}
+body main form .label {
+  margin: 10px 0 0 10px;
+}
+body main form input {
+  margin-top: 5px;
+}
+body main form .btn-container {
+  display: flex;
+  justify-content: center;
+}
+body main form .btn-container button {
+  font-family: "Henny Penny";
+  background: linear-gradient(#8cbf3f, #f2cc0f);
+  color: #0d0d0d;
+}
+body main form .btn-container button:hover {
+  border-color: #9453a6;
+  color: #f2f2f2;
+}
+body main form span {
+  color: red;
+}
+body main form i,
+body main form .form-sent {
+  color: seagreen;
+}
+body footer {
+  height: 230px;
+  background-color: #9453a6;
+}
+body footer .row {
+  align-items: center;
+  height: 250px;
+  font-family: "Roboto Serif", serif;
+}
+body footer .row .left {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 180px;
+}
+body footer .row .left .logo_container {
+  height: 110px;
+}
+body footer .row .left .menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 380px;
+}
+body footer .row .left .copyright {
+  font-size: small;
+}
+body footer .row .center {
+  flex-direction: column;
+  padding: 35px;
+}
+body footer .row .center .icon {
+  display: flex;
+  justify-content: space-evenly;
+}
+body footer .row .right {
+  flex-direction: column;
+  padding: 30px;
+}
+body footer .row .right .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 25px 10px 25px;
+}
+body footer .row .right .info h5 {
+  font-family: "Pattaya", sans-serif;
+}
+body footer .row .right .info p {
+  font-size: 12px;
+}
+body footer .row .right .icon {
+  display: flex;
+  justify-content: space-evenly;
+}
+body footer .fa-solid {
+  color: #0d0d0d;
+}
+@media (max-width: 768px) {
+  body main form {
+    width: 100vw;
+  }
+  body main form .label {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  body .form-control::-moz-placeholder {
+    opacity: 0;
+  }
+  body .form-control:-ms-input-placeholder {
+    opacity: 0;
+  }
+  body .form-control::placeholder {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
