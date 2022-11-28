@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>API Project</title>
+  </head>
+
+  <body>
+    <div class="container text-center text-dark bg-white heading">
+      <h1 class="display-1">TV Show Search</h1>
+      <p class="lead mt-3">You have <span class="favorite">0</span> favorite shows</p>
+      <form id="searchForm">
+        <input type="text" placeholder="TV Show Title" name="query" />
+        <button class="btn btn-dark submit">Submit</button>
+        <a class="btn btn-secondary" href="../favorite_pic/index.html">Favorite</a>
+        <button class="btn btn-danger" id="reset">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>

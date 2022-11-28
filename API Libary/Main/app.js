@@ -1,0 +1,41 @@
+import { MakeObj, container } from "./class.js";
+
+const form = document.querySelector("#searchForm");
+const reset = document.querySelector("#reset");
+const submit = document.querySelector(".submit");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  submit.disabled = true;
+  const searchTerm = form.elements.query.value;
+  const config = { params: { q: searchTerm } };
+  const res = await axios.get(`http://api.tvmaze.com/search/shows`, config);
+  const apiData = res.data;
+  container.classList.add("grid");
+  container.id = "shows";
+  window.location.href = "#shows";
+  createObj(apiData);
+  form.elements.query.value = "";
+});
+
+let flag = 0;
+const createObj = (data) => {
+  for (let index of data) {
+    flag++;
+    const newObj = new MakeObj(index.show.image.medium, index.show.id);
+    newObj.render();
+    if (flag > 8) {
+      break;
+    }
+  }
+};
+
+// Reset Button
+reset.addEventListener("click", (e) => {
+  e.preventDefault();
+  container.innerHTML = "";
+  form.elements.query.value = "";
+  submit.disabled = false;
+  flag = 0;
+});
