@@ -52,4 +52,7 @@ h1 {
   font-size: 1rem;
   right: 100%;
   font-family: sans-serif;
+  background: black;
+  padding: 1px;
+  border-radius: 5px;
 }
